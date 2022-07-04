@@ -1,5 +1,6 @@
 body {
     max-width: 800px;
+    font-size: 16;
 }
 
 .page-title {
@@ -10,4 +11,32 @@ body {
 
 .column-list h3 {
     margin-top: 2.0em;
+}
+
+/* .column img {
+    width: 300px !important;
+} */
+
+/* Oregano */
+img[src*="assets/a5142e9c-0373-4131-8ebd-1196c8f54219.jpg"] {
+    width: 600px !important;
+}
+
+/* Bees photo! */
+img[src*="assets/IMG_3259.jpg"] {
+    width: 350px !important;
+}
+
+/* Spanakopita! */
+img[src*="assets/7D85914C-B43B-4021-973E-3203CC0EB428.jpeg"] {
+    width: 300px !important;
+}
+/* Tortellini! */
+img[src*="assets/IMG_2659.jpg"] {
+    width: 300px !important;
+}
+
+/* Mural */
+img[src*="assets/1C91FAF7-1E33-4323-9323-1FAA50EE3E89.jpeg"] {
+    width: 600px !important;
 }
