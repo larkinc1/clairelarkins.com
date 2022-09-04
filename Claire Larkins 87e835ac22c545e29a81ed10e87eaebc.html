@@ -1,0 +1,678 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Claire Larkins</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="a9aa92c5-c6ea-415b-80ef-dc97aba1adc1" class="page serif"><header><h1 class="page-title">Claire Larkins</h1></header><div class="page-body"><div id="dcd074fe-29a2-4cba-bcfb-2dfd4780ba21" class="column-list"><div id="c9b5df50-6c6d-4d01-9ac1-9063fbaa56ac" style="width:25%" class="column"><figure id="87e835ac-22c5-45e2-9a81-ed10e87eaebc" class="image"><a href="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/6N2A6915-2_(2).jpg"><img style="width:1166px" src="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/6N2A6915-2_(2).jpg"/></a></figure><p id="b55e9c08-b071-41b0-bdf2-9015b1d7a34f" class="">
+</p></div><div id="4d3d344a-631f-4e80-8e20-98650bead9bb" style="width:75%" class="column"><h3 id="1c83f7fc-35ba-4596-9edb-99e8a92b34f3" class="">Nutritional Science Student</h3><p id="9fcda5bc-4d40-4d1b-b4c6-622d4749abed" class="">Hi, I’m Claire! I’m a nutritional science student living in San Francisco. I use my creativity to find solutions to problems in healthcare. My focus is to prevent and reverse diet-linked chronic diseases by increasing education for early detection and improving disease management through integrative care. </p><p id="e6287bc4-c049-42cb-ad5d-a3ce30d00ede" class="">                <a href="mailto:clairehlarkins@gmail.com">Email</a>  /  <a href="https://www.linkedin.com/in/claire-larkins/">LinkedIn</a></p></div></div><figure id="d2437e58-4202-4517-9624-ecf883fd55bc" class="image"><a href="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/a5142e9c-0373-4131-8ebd-1196c8f54219.jpg"><img style="width:672px" src="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/a5142e9c-0373-4131-8ebd-1196c8f54219.jpg"/></a><figcaption>Wild Oregano Flower Bundles</figcaption></figure><h2 id="8eafce25-bfc3-418c-a80b-39a714466d26" class="">About Me</h2><p id="3ce595ba-c5c2-46ab-b920-8e40d2ca458b" class="">I grew up on a farm in rural Oregon, and  I’ve seen from personal experience how people suffer from poor access to food, lack of culinary skills, and misinformation about nutrition. I want to support my community to feel better by eating better. I have a strong history of professional experience and volunteer work at nonprofit organizations working to improve public health. I pursue organizations with community-oriented missions that inspire me. I recently returned to school to become a registered dietitian to further my impact.</p><p id="a653d15e-ac5c-47a3-9fc4-2aafa043f550" class="">I always seek opportunities to dive into integrative health, culinary medicine, agriculture, and sustainability projects. Feel free to reach out, and together we can work to improve our community&#x27;s wellness.</p><hr id="448c456f-3392-45a7-90d4-87cc22aa9471"/><figure id="9bb1d822-c5b7-4aee-9bd9-10d242b12400" class="image"><a href="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/IMG_5116-2.jpg"><img style="width:1967px" src="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/IMG_5116-2.jpg"/></a></figure><h2 id="536fc468-c382-448f-95a9-851aa410026f" class="">Experience</h2><p id="93786c4f-9d5f-4655-80d6-1fc20bb108c8" class=""><strong>Farms to Grow - </strong>Urban Garden Volunteer, <em>Oakland, CA                                                                                     </em><div class="indented"><p id="1dab3e17-2849-4a48-8e87-788a3fde70f1" class=""> Collaborated in teams to plant, grow and harvest produce using sustainable practices like no-till farming and crop covering. I maintained a variety of crops, mixed compost, and pruned.</p></div></p><p id="055a0b0f-d0bf-46a4-8f50-a00252aa4c8d" class=""><strong>WWOOF - </strong>Farmhand, <em>Naxos</em>, <em>Greece                                                                                          </em><div class="indented"><p id="1eae18e6-cd89-4d3a-acd9-8aacc4bcdadb" class="">Trained in regenerative agriculture, permaculture, seed saving, distilling herbs, and traditional Greek cooking. I planted vegetables, laid compost, and harvested wild herbs.</p></div></p><p id="d920f482-bd46-401b-a5a1-6e2331093927" class=""><strong>Sprouts</strong> - Volunteer, Nonprofit Chef Training Program, <em>San Francisco, CA</em><div class="indented"><p id="c74a5c91-ecc4-4714-bce6-5da32540aae6" class="">Fundraised tuition for chef training for disadvantaged youths at Sprout’s annual gala. I contributed to a live auction and panel event with Alice Waters, Michael Pollan, and Dominique Crenn. </p></div></p><p id="4ea519a0-d515-4ae7-87e3-29a80c382b5b" class=""><strong>18 Reasons</strong> - Volunteer, Nonprofit Cooking School,<em> San Francisco, CA</em><div class="indented"><p id="0bb6dbba-510f-4c99-8f3f-9e7d8b658dd6" class="">Delivered cooking education and meal planning lessons at Saint Mary&#x27;s Medical Center under a registered dietitian. I taught knife skills, food preparation, and nutrition, emphasizing diabetes management.</p></div></p><p id="6f80dba2-41a8-45bf-b55f-d7e5c40f068b" class="">S<strong>an Francisco SPCA - </strong>Veterinarian Technician, <em>San Francisco, CA                                                    </em><div class="indented"><p id="b27270aa-77b0-40ae-8103-fd4788b6b84c" class="">Delivered medical care to animals at the SPCA Hospital. Performed venipuncture, metabolic panels, microscopy, and vaccinations, emphasizing low-stress handling. I acted as a liaison between veterinarians and clients.</p></div></p><p id="674a1f32-4707-41ff-8b54-4b10f58cad0f" class=""><strong>Cellar 55</strong> - Sommelier’s Assistant and Tasting Room Manager, <em>Vancouver, WA</em><div class="indented"><p id="a300810d-c5c8-46a6-a130-62f4c9e091e8" class="">Ran operations at a wine storage facility and tasting room. Designed charcuterie board and wine tasting menus, catered events and managed online presence. Hired monthly artists and musicians. I learned about tasting, viticulture, and local business ownership under a sommelier.</p></div></p><p id="b4f32a9d-c524-4b72-a7a7-1c23cf183ad4" class=""><strong>Habitat for Humanity - </strong>Americorps Construction Site Lead, <em>Vancouver, WA</em>               <div class="indented"><p id="7faf8911-8d1c-41e6-9931-4498e315dc2a" class="">Coordinated teams of volunteers of up to thirty people to build houses. Taught carpentry, tool use, and team-building skills. Hosted events like Women’s Day, Youth Builds, and All Faith Days to encourage diversity and inclusivity on the construction site.</p></div></p><p id="b35fe58d-609c-48b6-ac1f-5348c60f88f8" class=""><strong>American Red Cross - </strong>Lead Phlebotomist,<em> Portland, OR</em>                         <div class="indented"><p id="0eb28677-15b2-493f-b076-e3b5d9c7ce41" class="">On-site supervisor for blood drives across the Pacific Northwest. I trained staff, managed events, and performed medical screenings and blood collections for partnering hospitals. I received my Medical Assisting, Phlebotomy, and First Aid licenses.</p></div></p><p id="ed263370-2aac-4b5d-bde7-2d72e707bbc2" class=""><strong>Health Care in the Himalayas-</strong><em><strong> </strong></em>Intern, <em>India and Nepal</em>	               <div class="indented"><p id="341a5e38-47ed-405b-893c-fc31523af55f" class="">Fieldwork program with a pre-med emphasis. I trained in patient intake for emergency pop-up clinics, calculated nutritional assessments, prepared meals for around 100 kids, and collected data on social determinants of health (ACEs).</p><p id="a0eee9c1-326f-42f6-9afc-04893239ed3e" class="">
+</p><hr id="e03de424-bf22-4bfb-8d16-26c8136a057f"/></div></p><div id="659e6fa7-ec45-47ba-a15f-533a11639c98" class="column-list"><div id="573f943e-ee6a-47a6-833f-7a0b0d69fda4" style="width:50%" class="column"><h2 id="05370752-e9fe-4d25-9371-823248a18f87" class="">Classes</h2><ul id="1f002f4b-0825-4ca0-aa52-71c781018f24" class="bulleted-list"><li style="list-style-type:disc">Portuguese Cooking, <em>Lisbon, Portugal</em></li></ul><ul id="5ae1594b-0a71-475e-acbb-7b83cb5694a9" class="bulleted-list"><li style="list-style-type:disc">Tortellini + Tiramisu, <em>Florence, Italy</em></li></ul><ul id="3c725106-e62d-4578-b67b-42ae9a1fdf1f" class="bulleted-list"><li style="list-style-type:disc">Mediterranean Cooking, <em>Athens, Greece</em></li></ul><ul id="3caa783c-9739-427d-8501-3bcf4ec21108" class="bulleted-list"><li style="list-style-type:disc">Olive Oil Workshop, <em>Naxos, Greece</em></li></ul><ul id="d4d301c3-afe0-44dc-bd53-b518018c1cf3" class="bulleted-list"><li style="list-style-type:disc">Cheese + Chocolate, <em>Zurich, Switzerland</em></li></ul><ul id="ec036fe4-ac2d-4278-9a59-529da9b903a1" class="bulleted-list"><li style="list-style-type:disc">Edible Herbs<em>, Zurich, Switzerland</em></li></ul><ul id="60b580ba-85ba-461f-a485-a4a2aeca2bfe" class="bulleted-list"><li style="list-style-type:disc">Maltese Food Pairing, <em> Gozo, Malta</em></li></ul><ul id="94e8edfe-859f-42e4-9a03-a809241075aa" class="bulleted-list"><li style="list-style-type:disc">Beekeeping, <em>Gozo, Malta</em></li></ul><ul id="2b2853e1-614a-4b9b-b9e2-a3fa622b2350" class="bulleted-list"><li style="list-style-type:disc">Wine Tasting  + Production,<em> Gozo, Malta</em></li></ul><ul id="72576470-76a0-4063-b83a-cc97b529afe8" class="bulleted-list"><li style="list-style-type:disc">Scuba Diving, <em>Gozo, Malta</em></li></ul><ul id="933719af-f2a7-49aa-b0e6-4a9bd3c99b6e" class="bulleted-list"><li style="list-style-type:disc">Medicinal Herbs, <em>Vancouver, Washington</em></li></ul><ul id="d4345a2a-1db4-4228-8b49-96368ae4108b" class="bulleted-list"><li style="list-style-type:disc">Seasonal Jamming, <em>Portland, Oregon</em></li></ul><ul id="066ee1b8-134f-4d59-9852-1907c141f91f" class="bulleted-list"><li style="list-style-type:disc">Terrarium Building, <em>Portland, Oregon</em></li></ul><ul id="feb27dbf-390b-47af-a180-f1a8ce12590c" class="bulleted-list"><li style="list-style-type:disc">Screen Printing, <em>Portland, Oregon</em></li></ul><hr id="14776478-deca-48dc-b27b-a634673a3e21"/></div><div id="7ab1a10f-0896-4aee-848d-75b462892c8e" style="width:50%" class="column"><p id="d1ff51ea-fcad-4872-918b-fa89e4ef7f89" class="">
+</p><figure id="76c46e13-8795-4f67-a0de-0046b88d6088" class="image"><a href="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/IMG_3259.jpg"><img style="width:2268px" src="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/IMG_3259.jpg"/></a></figure></div></div><div id="40332832-811d-4268-8b60-39d41e25e702" class="column-list"><div id="58d094b3-2e40-4b9d-b331-8e070ee99338" style="width:50%" class="column"><figure id="ba14ff22-65a2-43ef-96c6-903c57e908cb" class="image"><a href="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/7D85914C-B43B-4021-973E-3203CC0EB428.jpeg"><img style="width:288px" src="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/7D85914C-B43B-4021-973E-3203CC0EB428.jpeg"/></a></figure><figure id="20b9f16f-7e2b-400a-8716-4f9c570c6e98" class="image"><a href="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/IMG_2659.jpg"><img style="width:384px" src="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/IMG_2659.jpg"/></a></figure></div><div id="09207350-2fd0-4020-a8ab-d9f3f8235388" style="width:50%" class="column"><h2 id="1d0ef024-0561-4304-b54c-bcf9b997d1ce" class="">Books</h2><p id="4413d096-3f8f-4de9-b40b-e210420b4392" class=""><em>This is Your Mind on Plants</em> by Michael Pollan</p><p id="f047f8c9-67f4-400a-b44f-3212f9a6b0d7" class=""><em>Sustainability </em>by Jeremy Caradonna</p><p id="2a4bc51b-584a-48eb-8620-2cc751ff5706" class=""><em>The Good Gut </em>by Justin Sonnenburg</p><p id="6dd673d7-a10d-4037-b9d5-a18473446503" class=""><em>We Are What We Eat</em> by Alice Waters</p><p id="57a765db-bd22-409c-873e-a54eb59fc03d" class=""><em>Salt, Fat, Acid, Heat</em> by Samin Nosrat </p><p id="029befd2-3b46-42cd-9740-99c5f8e7706a" class=""><em>Clean </em>by James Hamblin</p><p id="80d7a1b6-778a-490e-a00f-01294aeefe10" class=""><em>Gut</em> by Giulia Enders</p><p id="ada9edd6-7f3f-4eb3-ac50-06bc9f615e73" class=""><em>The Salt Fix </em>by James DiNicolantonio</p><p id="94442c1e-05b9-4ad6-98d7-b6cae8385b74" class=""><em>Self-Compassion </em>by Kristin Neff</p><p id="87a55eb8-fcad-4eae-87c4-127a9484cc0f" class=""><em>The Paper Menagerie</em> by Ken Liu</p><p id="ffe8e7bf-2d7b-424d-82ec-a1734ee8ddc9" class=""><em>Exhalation</em> by Ted Chiang</p><p id="bd187687-f30c-490d-918a-ff58e6136291" class=""><em>Sourdough</em> by Robin Sloan</p><p id="8a5cbc93-ed9a-4c8e-997f-4856898ff4f8" class=""><em>Becoming </em>by Michelle Obama</p><p id="c12fcc88-b76c-443b-9ebc-c6164394bf23" class=""><em>The Secret Life of Plants</em> by Peter Tompkins</p><p id="3c520e40-c531-44ef-9f55-bd31891ca649" class=""><em>Braiding Sweetgrass </em>by Robin Kimmerer</p><p id="f4350bd9-4ddd-4b00-a3d7-137e47dac074" class=""><em>Living with the Chimpanzees</em> by Jane Goodall</p><p id="341fe6a2-5a8b-4c18-8352-d380d4b42438" class=""><em>The Body Keeps Score</em> by Bessel van der Kolk</p><p id="9c273785-b3d6-4410-b929-9867e14f456a" class=""><em>The Wind Up Bird Chronicle </em>by Haruki Murakami</p><p id="3ce72bd2-b590-479f-a031-e7b25abeae75" class=""><em>Into the Wild </em>by Jon Krakauer</p><p id="9352e0bd-9564-4564-9288-f3c1f8c22b58" class=""><em>The Murmur of Bees</em> by Sofia Segovia</p><p id="679850ca-09d2-450a-baa4-907c5ef58c98" class=""><em>The Gifts of Imperfection</em> by Brené Brown</p><p id="0ca0ddfb-ebd9-4778-a2fc-85b470b670fa" class=""><em>Buddha’s Brain </em>by Dr.Rick Hanson</p><p id="da34c1ef-5392-4ad7-9e09-8101cf5a2176" class=""><em>The Alchemist</em> by Paulo Coelho</p><p id="b3a89c03-23b7-4d36-9de4-8f5b229c288f" class="">
+</p><p id="aa50bc77-55fb-496f-b848-4e5913872640" class="">
+</p><hr id="b305a2ef-f43d-43ac-b2a0-fd853dbe2946"/></div></div><div id="09f6aace-f028-4c45-8ae8-d0035c7eeb6f" class="column-list"><div id="4c4ef60d-857f-4136-af16-1d223f75719e" style="width:50%" class="column"><p id="b080492a-c1e1-44ac-a9f1-ffb265c1263b" class="">
+</p><h2 id="c9f43c7c-0c17-49cd-9f55-3e3116ee73b5" class="">Events</h2><p id="6b166c43-4b9f-49d2-a54b-42b93bf8082b" class="">09.2022: Food and Medicine Symposium, Exploring the Gut Microbiome</p><p id="b12c40d2-b09b-432f-9c13-ebd0d6a5c8ec" class="">07.2022: Alice Waters, Slow Food Movement</p><p id="4e5bbd90-2642-4d47-9599-320440d32af6" class="">03.2022: Sprouts’ Benefit Gala</p><p id="c7305936-a5e4-46d9-ac7a-c15404481d1b" class="">08.2021: Health meets Food, Culinary Medicine Conference</p><p id="fb06561e-51e6-4666-a68d-6de82a98aff0" class="">
+</p><p id="e31db69c-0946-4829-816c-c30cd44bd74e" class="">
+</p><p id="c0651b8f-a95f-4865-9330-97f6ee8c02fe" class="">
+</p><hr id="b3261d77-afcd-4245-a34b-df9fe3a69895"/></div><div id="154e3b2c-b4ee-49f1-a472-abcc2827203b" style="width:50%" class="column"><figure id="b4336f38-2d74-44ea-9e99-f630760d4124" class="image"><a href="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/Untitled.png"><img style="width:336px" src="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/Untitled.png"/></a><figcaption>Breaking ground at an HFH construction site.</figcaption></figure></div></div><h2 id="eb0a73ae-827b-4155-b270-4b4951e62932" class="">Hobbies</h2><p id="f24958bb-002b-4186-9a3f-98089db105cf" class="">I love to create. </p><p id="78352fff-2cc8-4ddf-93be-508d0a085a6f" class="">I cook, bake, draw, paint,  rollerskate, and identify plants</p><p id="6bf7f2d5-7c07-4ce6-b15e-1a74ea3c84a1" class="">I kayak, backpack, do yoga, and play beach volleyball. </p><figure id="491598ac-9357-461e-917f-d10536497ad6" class="image"><a href="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/1C91FAF7-1E33-4323-9323-1FAA50EE3E89.jpeg"><img style="width:720px" src="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/1C91FAF7-1E33-4323-9323-1FAA50EE3E89.jpeg"/></a><figcaption> <em>Flying Things Scanning Stuff, </em>an 18’ X 8’ mural I completed in April 2022.</figcaption></figure><hr id="d1ab9b0e-3e59-4b2f-9f80-b785d1550fb7"/></div></article></body></html>
