@@ -3,6 +3,99 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Claire Larkins</title>
     <style>
+	/*Icon*/
+.icon-scroll {
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	width: 1em;
+	height: 3.125em;
+	transform: translateX(-50%) scale(4);
+	z-index: 99999;
+}
+
+.icon-arrows::after,
+.icon-arrows::before {
+  content: '';
+}
+.icon-arrows span,
+.icon-arrows::after,
+.icon-arrows::before {
+	display: block;
+	width: 0.315em;
+	height: 0.315em;
+	border-right: 1px solid rgba(255,255,255,.8);
+	border-bottom: 1px solid rgba(255,255,255,.8);
+	margin: 0 0 0.125em 0.315em;
+	transform: rotate(45deg);
+  animation: mouse-scroll 1s infinite;
+	animation-direction: alternate;
+}
+
+.icon-arrows::before {
+	margin-top: 0.315em;
+	animation-delay: .1s;
+}
+
+.icon-scroll span {
+	animation-delay: .2s;
+}
+
+.icon-arrows::after {
+	animation-delay: .3s;
+}
+
+.icon-scroll .mouse {
+	height: 1.375em;
+	width: .875em;
+	border: 1px solid rgba(255,255,255,.8);
+	border-radius: 2em;
+}
+
+.icon-scroll .wheel {
+  position: relative;
+  display: block;
+  height: 0.1875em;
+  width: 0.1875em;
+  margin: 0.1875em auto 0;
+  background: rgba(255,255,255,.8);
+  animation: mouse-wheel 1.2s ease infinite;
+  border-radius: 50%;
+}
+
+@keyframes mouse-wheel {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(.375em);
+	}
+}
+
+@keyframes mouse-scroll {
+	0%   { opacity: 0; }
+	50%  { opacity: .5; }
+	100% { opacity: 1; }
+}
+
+body {
+  background: #714A87;
+  color: #FFF;
+  color: rgba(255,255,255,.6);
+  font-family: sans-serif;
+  text-align: center;
+}
+h1 {
+  padding-top: 2em;
+  font-weight: lighter;
+}
+a {
+  color: inherit;
+}
+/*Icon*/
       /* cspell:disable-file */
       /* webkit printing magic: print all background colors */
       html {
@@ -888,12 +981,50 @@
         background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
       }
     </style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
   </head>
   <body>
     <article id="a9aa92c5-c6ea-415b-80ef-dc97aba1adc1" class="page serif">
       <img class="page-cover-image" src="https://raw.githubusercontent.com/larkinc1/clairelarkins.com/main/assets/Claire Larkins.png" style="object-position:center 54.230000000000004%" />
       <!--<h1 class="page-title" style="width: 100%;text-align: center;">Claire Larkins</h1>-->
-      <header>
+		<a href="#dcd074fe-29a2-4cba-bcfb-2dfd4780ba21">
+		<div class="icon-scroll">
+		  <div class="mouse">
+			<div class="wheel"></div>
+		  </div>
+		  <div class="icon-arrows">
+			<span></span>
+		  </div>
+		</div>
+		</a>
+
+	  <header>
         <div class="page-body">
           <div id="dcd074fe-29a2-4cba-bcfb-2dfd4780ba21" class="column-list">
             <div id="c9b5df50-6c6d-4d01-9ac1-9063fbaa56ac" style="width:30%" class="column">
