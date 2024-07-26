@@ -92,18 +92,27 @@
 }
 
 body {
-  background: #714A87;
-  color: #FFF;
-  color: rgba(255,255,255,.6);
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
   font-family: sans-serif;
   text-align: center;
 }
-h1 {
-  padding-top: 2em;
-  font-weight: lighter;
+
+h1, h2, h3, p {
+  color: #ffffff; /* Ensure headings and paragraphs have white text */
 }
+
 a {
-  color: inherit;
+  color: #ffffff; /* Ensure links have white text */
+}
+
+/* Add specific styles for other elements if needed */
+table, th, td {
+  border: 1px solid #ffffff; /* White borders for table elements */
+}
+
+hr {
+  border-color: #ffffff; /* White color for horizontal rules */
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px){
   	  .icon-scroll {
