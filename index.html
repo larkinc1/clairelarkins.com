@@ -1,4 +1,3 @@
-
 <html>
   <head>
 	  <!-- Google tag (gtag.js) -->
@@ -92,33 +91,18 @@
 }
 
 body {
-  background-color: #000000; /* Black background */
-  color: #ffffff; /* White text */
-  font-family: Garamond, serif; /* Set Garamond as the primary font, with serif as a fallback */
+  background: #714A87;
+  color: #FFF;
+  color: rgba(255,255,255,.6);
+  font-family: Garamond, serif;
+  text-align: center;
 }
-
-h1, h2, h3, p {
-  color: #ffffff; /* Ensure headings and paragraphs have white text */
-  background-color: #333333; /* Dark grey background for readability */
-  padding: 0.5em; /* Optional: Add padding for better readability */
-  border-radius: 5px; /* Optional: Rounded corners for a softer look */
-  font-family: Garamond, serif; /* Ensure Garamond is used for headers and paragraphs */
+h1 {
+  padding-top: 2em;
+  font-weight: lighter;
 }
-
 a {
-  color: #ffffff; /* Ensure links have white text */
-  font-family: Garamond, serif; /* Ensure Garamond is used for links */
-}
-
-/* Table styles */
-table, th, td {
-  border: 1px solid #ffffff; /* White borders for table elements */
-  font-family: Garamond, serif; /* Ensure Garamond is used for table elements */
-}
-
-/* Horizontal rule styles */
-hr {
-  border-color: #ffffff; /* White color for horizontal rules */
+  color: inherit;
 }
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px){
   	  .icon-scroll {
@@ -141,7 +125,7 @@ hr {
       body {
         margin: 0;
         padding: 0;
-        background-color: #000000; /* Black background */
+        background-color: #FFFFFF;
       }
 
       article {
@@ -160,30 +144,28 @@ hr {
         width: 900px;
       }
 
-@media only screen {
-  body {
-    /* margin: 2em auto; */
-    /* max-width: 900px; */
-    color: white; /* Text color */
-    background-color: black; /* Background color */
-  }
-}
+      @media only screen {
+        body {
+          /* margin: 2em auto; */
+          /* max-width: 900px; */
+          color: rgb(55, 53, 47);
+        }
+      }
 
       body {
         line-height: 1.5;
         /*white-space: pre-wrap;*/
-  }
+      }
 
-  a,
-  a:visited {
-    color: white; /* Text color for links */
-    text-decoration: underline; /* Underline links */
-  }
-}
+      a,
+      a.visited {
+        color: inherit;
+        text-decoration: underline;
+      }
 
       .pdf-relative-link-path {
         font-size: 80%;
-        color: white;
+        color: #444;
       }
 
       h1,
@@ -328,21 +310,20 @@ hr {
       div#c9b5df50-6c6d-4d01-9ac1-9063fbaa56ac h1.page-title {
         font-size: 25px;
         text-align: center;
-@media only screen {
-  p#\39 fcda5bc-4d40-4d1b-b4c6-622d4749abed:hover {
-    background-color: black; /* Background color for hover state */
-    color: white; /* Text color for hover state */
-    padding: 15px; /* Padding */
-  }
-}
+      }
+
+      p#\39 fcda5bc-4d40-4d1b-b4c6-622d4749abed:hover {
+        background-color: #f1f1ef;
+        padding: 15px;
+        box-shadow: 5px 5px;
+      }
 
       .abc {
         transition-duration: 1s;
       }
 
-.abc:hover {
-  background-color: black;
-  color: white;
+      .abc:hover {
+        background-color: #f1f1ef;
         padding: 15px;
         margin-top: 10px;
         box-shadow: 5px 5px;
@@ -399,21 +380,17 @@ hr {
       }
 
       th,
-td {
-  font-weight: normal;
-  padding: 0.25em 0.5em;
-  line-height: 1.5;
-  min-height: 1.5em;
-  text-align: left;
-  color: white; /* Change text color to white */
-  background-color: #333; /* Optional: Set a dark background color for cells */
-}
+      td {
+        font-weight: normal;
+        padding: 0.25em 0.5em;
+        line-height: 1.5;
+        min-height: 1.5em;
+        text-align: left;
+      }
 
-/* Styling for table headers (th) */
-th {
-  color: white; /* Change text color to white */
-  background-color: #444; /* Optional: Set a slightly lighter dark background color for headers */
-}
+      th {
+        color: rgba(55, 53, 47, 0.6);
+      }
 
       ol,
       ul {
@@ -519,9 +496,9 @@ th {
         min-width: 120px;
       }
 
-.simple-table-header-color {
-  background: #000; /* Set background color to black */
-  color: #fff;       /* Set text color to white */
+      .simple-table-header-color {
+        background: rgb(247, 246, 243);
+        color: black;
       }
 
       .simple-table-header {
@@ -623,14 +600,18 @@ th {
       }
 
       .code,
-code {
-  background: rgba(255, 255, 255, 0.1); /* Adjusted background for dark theme */
-  border-radius: 3px;
-  padding: 0.2em 0.4em;
-  font-size: 85%;
-  tab-size: 2;
-  color: #e0e0e0; /* Light color for text */
-}
+      code {
+        background: rgba(135, 131, 120, 0.15);
+        border-radius: 3px;
+        padding: 0.2em 0.4em;
+        border-radius: 3px;
+        font-size: 85%;
+        tab-size: 2;
+      }
+
+      code {
+        color: #eb5757;
+      }
 
       .code {
         padding: 1.5em 1em;
@@ -641,11 +622,12 @@ code {
         word-break: break-all;
       }
 
-.code > code {
-  background: none; /* Keeps the background transparent */
-  padding: 0; /* No extra padding */
-  font-size: 100%; /* Uses the base font size */
-  color: #e0e0e0; 
+      .code>code {
+        background: none;
+        padding: 0;
+        font-size: 100%;
+        color: inherit;
+      }
 
       blockquote {
         font-size: 1.25em;
@@ -695,13 +677,13 @@ code {
         border-radius: 1px;
       }
 
-.bookmark-description {
-  color: #e0e0e0; /* Light color for readability on a dark background */
-  font-size: 0.75em; /* Keeps the font size consistent */
-  overflow: hidden; /* Ensures content that overflows is hidden */
-  max-height: 4.5em; /* Limits the height of the container */
-  word-break: break-word; /* Prevents words from overflowing their container */
-}
+      .bookmark-description {
+        color: rgba(55, 53, 47, 0.6);
+        font-size: 0.75em;
+        overflow: hidden;
+        max-height: 4.5em;
+        word-break: break-word;
+      }
 
       .bookmark-href {
         font-size: 0.75em;
@@ -788,55 +770,54 @@ code {
         font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
       }
 
-.highlight-default {
-  color: #e0e0e0; /* Light gray color for default highlighting */
-  fill: #e0e0e0;  /* Ensures the fill color matches the text color */
-}
+      .highlight-default {
+        color: rgba(55, 53, 47, 1);
+      }
 
-.highlight-gray {
-  color: #b0b0b0; /* Lighter gray for gray highlights */
-  fill: #b0b0b0;  /* Ensures consistency between text and fill */
-}
+      .highlight-gray {
+        color: rgba(120, 119, 116, 1);
+        fill: rgba(120, 119, 116, 1);
+      }
 
-.highlight-brown {
-  color: #d8a07b; /* Lighter, more vivid brown for better contrast */
-  fill: #d8a07b;  /* Matches the text color for fills */
-}
+      .highlight-brown {
+        color: rgba(159, 107, 83, 1);
+        fill: rgba(159, 107, 83, 1);
+      }
 
-.highlight-orange {
-  color: #f7a53c; /* Bright orange that stands out against dark backgrounds */
-  fill: #f7a53c;  /* Consistent fill color */
-}
+      .highlight-orange {
+        color: rgba(217, 115, 13, 1);
+        fill: rgba(217, 115, 13, 1);
+      }
 
-.highlight-yellow {
-  color: #f5c67a; /* Light yellow that remains visible on dark backgrounds */
-  fill: #f5c67a;  /* Ensures the highlight color is consistent */
-}
+      .highlight-yellow {
+        color: rgba(203, 145, 47, 1);
+        fill: rgba(203, 145, 47, 1);
+      }
 
-.highlight-teal {
-  color: #4db6ac; /* Light teal for visibility on dark backgrounds */
-  fill: #4db6ac;  /* Consistent with text color */
-}
+      .highlight-teal {
+        color: rgba(68, 131, 97, 1);
+        fill: rgba(68, 131, 97, 1);
+      }
 
-.highlight-blue {
-  color: #4fc3f7; /* Bright blue for contrast */
-  fill: #4fc3f7;  /* Consistent with text color */
-}
+      .highlight-blue {
+        color: rgba(51, 126, 169, 1);
+        fill: rgba(51, 126, 169, 1);
+      }
 
-.highlight-purple {
-  color: #ab47bc; /* Vivid purple for readability */
-  fill: #ab47bc;  /* Consistent with text color */
-}
+      .highlight-purple {
+        color: rgba(144, 101, 176, 1);
+        fill: rgba(144, 101, 176, 1);
+      }
 
-.highlight-pink {
-  color: #f06292; /* Bright pink for good contrast */
-  fill: #f06292;  /* Consistent with text color */
-}
+      .highlight-pink {
+        color: rgba(193, 76, 138, 1);
+        fill: rgba(193, 76, 138, 1);
+      }
 
-.highlight-red {
-  color: #e57373; /* Bright red for high visibility */
-  fill: #e57373;  /* Consistent with text color */
-}
+      .highlight-red {
+        color: rgba(212, 76, 71, 1);
+        fill: rgba(212, 76, 71, 1);
+      }
 
       .highlight-gray_background {
         background: rgba(241, 241, 239, 1);
@@ -879,46 +860,45 @@ code {
         fill: inherit;
       }
 
+      .block-color-gray {
+        color: rgba(120, 119, 116, 1);
+        fill: rgba(120, 119, 116, 1);
+      }
 
-.block-color-gray {
-  color: #e0e0e0; /* Light gray for better contrast on dark backgrounds */
-  fill: #e0e0e0;  /* Consistent with text color */
-}
+      .block-color-brown {
+        color: rgba(159, 107, 83, 1);
+        fill: rgba(159, 107, 83, 1);
+      }
 
-.block-color-brown {
-  color: #a57b3d; /* Light brown to stand out on dark backgrounds */
-  fill: #a57b3d;  /* Consistent with text color */
-}
+      .block-color-orange {
+        color: rgba(217, 115, 13, 1);
+        fill: rgba(217, 115, 13, 1);
+      }
 
-.block-color-orange {
-  color: #ffb74d; /* Bright orange for high visibility */
-  fill: #ffb74d;  /* Consistent with text color */
-}
+      .block-color-yellow {
+        color: rgba(203, 145, 47, 1);
+        fill: rgba(203, 145, 47, 1);
+      }
 
-.block-color-yellow {
-  color: #fdd835; /* Bright yellow for high contrast */
-  fill: #fdd835;  /* Consistent with text color */
-}
+      .block-color-teal {
+        color: rgba(68, 131, 97, 1);
+        fill: rgba(68, 131, 97, 1);
+      }
 
-.block-color-teal {
-  color: #4db6ac; /* Light teal for visibility */
-  fill: #4db6ac;  /* Consistent with text color */
-}
+      .block-color-blue {
+        color: rgba(51, 126, 169, 1);
+        fill: rgba(51, 126, 169, 1);
+      }
 
-.block-color-blue {
-  color: #64b5f6; /* Bright blue for high visibility */
-  fill: #64b5f6;  /* Consistent with text color */
-}
+      .block-color-purple {
+        color: rgba(144, 101, 176, 1);
+        fill: rgba(144, 101, 176, 1);
+      }
 
-.block-color-purple {
-  color: #ba68c8; /* Lighter purple for contrast */
-  fill: #ba68c8;  /* Consistent with text color */
-}
-
-.block-color-pink {
-  color: #f06292; /* Light pink for better visibility */
-  fill: #f06292;  /* Consistent with text color */
-}
+      .block-color-pink {
+        color: rgba(193, 76, 138, 1);
+        fill: rgba(193, 76, 138, 1);
+      }
 
       .block-color-red {
         color: rgba(212, 76, 71, 1);
