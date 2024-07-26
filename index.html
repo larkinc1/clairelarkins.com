@@ -1,338 +1,1211 @@
 <html>
-<html lang="en">
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXKP308B2C"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-XXKP308B2C');
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claire Larkins</title>
+  <head>
+	  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXKP308B2C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXKP308B2C');
+</script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Claire Larkins</title>
     <style>
-/* General Styles */
-body {
-    background: #714A87;
-    color: rgba(255, 255, 255, 0.6);
-    font-family: sans-serif;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
-}
-h1, h2, h3 {
-    letter-spacing: -0.01em;
-    line-height: 1.2;
-    font-weight: 600;
-    margin: 0;
-}
-h1 {
-    font-size: 1.875rem;
-    margin-top: 2rem;
-}
-h2 {
-    font-size: 1.5rem;
-    margin-top: 1.5rem;
-    text-align: left;
-}
-h3 {
-    font-size: 1.75rem;
-    margin-top: 1.25rem;
-}
-a, a:visited {
-    color: inherit;
-    text-decoration: underline;
+	/*Icon*/
+.icon-scroll {
+	position: absolute;
+	top: 85%;
+	left: 50%;
+	width: 1em;
+	height: 3.125em;
+	transform: translateX(-50%) scale(2);
+	z-index: 99999;
 }
 
-/* Icon Styles */
-.icon-scroll {
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    width: 1em;
-    height: 3.125em;
-    transform: translateX(-50%) scale(2);
-    z-index: 99999;
-}
 .icon-arrows::after,
 .icon-arrows::before {
-    content: '';
+  content: '';
 }
 .icon-arrows span,
 .icon-arrows::after,
 .icon-arrows::before {
-    display: block;
-    width: 0.315em;
-    height: 0.315em;
-    border-right: 1px solid rgba(255, 255, 255, 0.8);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
-    margin: 0 0 0.125em 0.315em;
-    transform: rotate(45deg);
-    animation: mouse-scroll 1s infinite alternate;
+	display: block;
+	width: 0.315em;
+	height: 0.315em;
+	border-right: 1px solid rgba(255,255,255,.8);
+	border-bottom: 1px solid rgba(255,255,255,.8);
+	margin: 0 0 0.125em 0.315em;
+	transform: rotate(45deg);
+  animation: mouse-scroll 1s infinite;
+	animation-direction: alternate;
 }
+
 .icon-arrows::before {
-    margin-top: 0.315em;
-    animation-delay: 0.1s;
+	margin-top: 0.315em;
+	animation-delay: .1s;
 }
+
 .icon-scroll span {
-    animation-delay: 0.2s;
+	animation-delay: .2s;
 }
+
 .icon-arrows::after {
-    animation-delay: 0.3s;
+	animation-delay: .3s;
 }
+
 .icon-scroll .mouse {
-    height: 1.375em;
-    width: 0.875em;
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    border-radius: 2em;
+	height: 1.375em;
+	width: .875em;
+	border: 1px solid rgba(255,255,255,.8);
+	border-radius: 2em;
 }
+
 .icon-scroll .wheel {
-    position: relative;
-    display: block;
-    height: 0.1875em;
-    width: 0.1875em;
-    margin: 0.1875em auto 0;
-    background: rgba(255, 255, 255, 0.8);
-    animation: mouse-wheel 1.2s ease infinite;
-    border-radius: 50%;
+  position: relative;
+  display: block;
+  height: 0.1875em;
+  width: 0.1875em;
+  margin: 0.1875em auto 0;
+  background: rgba(255,255,255,.8);
+  animation: mouse-wheel 1.2s ease infinite;
+  border-radius: 50%;
 }
+
 @keyframes mouse-wheel {
-    0% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(0.375em);
-    }
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(.375em);
+	}
 }
+
 @keyframes mouse-scroll {
-    0% { opacity: 0; }
-    50% { opacity: 0.5; }
-    100% { opacity: 1; }
-}
-@media only screen and (max-device-width: 480px) {
-    .icon-scroll {
-        display: none;
-    }
+	0%   { opacity: 0; }
+	50%  { opacity: .5; }
+	100% { opacity: 1; }
 }
 
-/* Print and Layout Styles */
-@media only screen {
-    body {
-        color: rgb(55, 53, 47);
-    }
+body {
+  background: #714A87;
+  color: #FFF;
+  color: rgba(255,255,255,.6);
+  font-family: sans-serif;
+  text-align: center;
 }
-@media only print {
-    img {
-        max-height: 100vh;
-        object-fit: contain;
-    }
+h1 {
+  padding-top: 2em;
+  font-weight: lighter;
 }
-@page {
-    margin: 1in;
+a {
+  color: inherit;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px){
+  	  .icon-scroll {
+		display: none;
+	}
+}
+/*Icon*/
+      /* cspell:disable-file */
+      /* webkit printing magic: print all background colors */
+      html {
+        -webkit-print-color-adjust: exact;
+      }
+
+      * {
+        box-sizing: border-box;
+        -webkit-print-color-adjust: exact;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #FFFFFF;
+      }
+
+      article {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .page-body {
+        max-width: 900px;
+      }
+
+      header {
+        width: 900px;
+      }
+
+      @media only screen {
+        body {
+          /* margin: 2em auto; */
+          /* max-width: 900px; */
+          color: rgb(55, 53, 47);
+        }
+      }
+
+      body {
+        line-height: 1.5;
+        /*white-space: pre-wrap;*/
+      }
+
+      a,
+      a.visited {
+        color: inherit;
+        text-decoration: underline;
+      }
+
+      .pdf-relative-link-path {
+        font-size: 80%;
+        color: #444;
+      }
+
+      h1,
+      h2,
+      h3 {
+        letter-spacing: -0.01em;
+        line-height: 1.2;
+        font-weight: 600;
+        margin-bottom: 0;
+      }
+
+      .page-title {
+        /*font-size: 2.5rem;*/
+        font-weight: 700;
+        margin-top: 0.75em;
+        /*margin-bottom: 0.75em;*/
+      }
+
+      h1 {
+        font-size: 1.875rem;
+        margin-top: 1.875rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+	text-align:left;
+      }
+
+      h3 {
+        font-size: 1.75rem;
+        margin-top: 1.25rem;
+      }
+
+      .source {
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        padding: 1.5em;
+        word-break: break-all;
+      }
+
+      .callout {
+        border-radius: 3px;
+        padding: 1rem;
+      }
+
+      figure {
+        margin: 1.25em 0;
+        page-break-inside: avoid;
+      }
+
+      figcaption {
+        opacity: 0.5;
+        font-size: 85%;
+        margin-top: 0.5em;
+      }
+
+      mark {
+        background-color: transparent;
+      }
+
+      .indented {
+        padding-left: 1.5em;
+        text-align: justify;
+        /* 05-sep */
+      }
+
+      hr {
+        background: transparent;
+        display: block;
+        width: 100%;
+        height: 1px;
+        visibility: visible;
+        border: none;
+        border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      @media only print {
+        img {
+          max-height: 100vh;
+          object-fit: contain;
+        }
+      }
+
+      @page {
+        margin: 1in;
+      }
+
+      .collection-content {
+        font-size: 0.875rem;
+      }
+
+      .column-list {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .column {
+        padding: 0 1em;
+      }
+
+      .column:first-child {
+        padding-left: 0;
+      }
+
+      .column:last-child {
+        padding-right: 0;
+        margin-right: 20%;
+        /* 05-sep */
+      }
+
+      /* 05-sep */
+      /*figure#\37 6c46e13-8795-4f67-a0de-0046b88d6088 {
+        margin: -1.5em 0 !important;
+      }*/
+	  
+	  div#\34 c4ef60d-857f-4136-af16-1d223f75719e {
+    margin-top: 25px;
 }
 
-/* Content Styles */
-article {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.page-body {
-    max-width: 900px;
-}
-header {
-    width: 900px;
-}
-.pdf .sans {
-    font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP';
-}
-.pdf .code {
-    font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
-}
-.pdf .serif {
-    font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP';
-}
-.pdf .mono {
-    font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
-}
-p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    text-align: justify;
-    font-size: 20px !important;
-    transition-duration: 1s;
-}
-.code, code {
-    background: rgba(135, 131, 120, 0.15);
-    border-radius: 3px;
-    padding: 0.2em 0.4em;
-    font-size: 85%;
-    tab-size: 2;
-}
-code {
-    color: #eb5757;
-}
-.code {
-    padding: 1.5em 1em;
-}
-.code-wrap {
-    white-space: pre-wrap;
-    word-break: break-all;
-}
-.code > code {
-    background: none;
-    padding: 0;
-    font-size: 100%;
-    color: inherit;
-}
-blockquote {
-    font-size: 1.25em;
-    margin: 1em 0;
-    padding-left: 1em;
-    border-left: 3px solid rgb(55, 53, 47);
-}
-mark {
-    text-decoration: none;
-    max-height: 8em;
-    padding: 0;
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-}
-.image {
-    border: none;
-    margin: 1.5em 0;
-    padding: 0;
-    border-radius: 0;
-    text-align: center;
-}
-.user-icon {
-    width: 1.5em;
-    height: 1.5em;
-    border-radius: 100%;
-    margin-right: 0.5rem;
-}
-.user-icon-inner {
-    font-size: 0.8em;
-}
-.link-to-page {
-    margin: 1em 0;
-    padding: 0;
-    border: none;
-    font-weight: 500;
-}
-.image {
-    border: none;
-    margin: 1.5em 0;
-    padding: 0;
-    border-radius: 0;
-    text-align: center;
-}
+      div#\36 59e6fa7-ec45-47ba-a15f-533a11639c98 {
+        margin-bottom: 30px;
+      }
 
-/* Table Styles */
-table, th, td {
-    border: 1px solid rgba(55, 53, 47, 0.09);
-    border-collapse: collapse;
+      div#\30 9207350-2fd0-4020-a8ab-d9f3f8235388 p,
+      div#\34 c4ef60d-857f-4136-af16-1d223f75719e p {
+        font-size: 17px !important;
+      }
+
+      div#\30 9f6aace-f028-4c45-8ae8-d0035c7eeb6f {
+        /*margin-bottom: -100px;*/
+      }
+
+      div#\34 d3d344a-631f-4e80-8e20-98650bead9bb {
+        margin-right: 0 !important;
+      }
+
+      div#c9b5df50-6c6d-4d01-9ac1-9063fbaa56ac h1.page-title {
+        font-size: 25px;
+        text-align: center;
+      }
+
+      p#\39 fcda5bc-4d40-4d1b-b4c6-622d4749abed:hover {
+        background-color: #f1f1ef;
+        padding: 15px;
+        box-shadow: 5px 5px;
+      }
+
+      .abc {
+        transition-duration: 1s;
+      }
+
+      .abc:hover {
+        background-color: #f1f1ef;
+        padding: 15px;
+        margin-top: 10px;
+        box-shadow: 5px 5px;
+        transition-duration: 1s;
+      }
+
+      @media (max-width:480px) {
+        .column:last-child {
+          padding-right: 0 !important;
+          margin-right: 5% !important;
+        }
+
+        .column:first-child {
+          padding-left: 8% !important;
+        }
+      }
+
+      /* 05-sep */
+      .table_of_contents-item {
+        display: block;
+        font-size: 0.875rem;
+        line-height: 1.3;
+        padding: 0.125rem;
+      }
+
+      .table_of_contents-indent-1 {
+        margin-left: 1.5rem;
+      }
+
+      .table_of_contents-indent-2 {
+        margin-left: 3rem;
+      }
+
+      .table_of_contents-indent-3 {
+        margin-left: 4.5rem;
+      }
+
+      .table_of_contents-link {
+        text-decoration: none;
+        opacity: 0.7;
+        border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid rgba(55, 53, 47, 0.09);
+        border-collapse: collapse;
+      }
+
+      table {
+        border-left: none;
+        border-right: none;
+      }
+
+      th,
+      td {
+        font-weight: normal;
+        padding: 0.25em 0.5em;
+        line-height: 1.5;
+        min-height: 1.5em;
+        text-align: left;
+      }
+
+      th {
+        color: rgba(55, 53, 47, 0.6);
+      }
+
+      ol,
+      ul {
+        margin: 0;
+        margin-block-start: 0.6em;
+        margin-block-end: 0.6em;
+      }
+
+      li>ol:first-child,
+      li>ul:first-child {
+        margin-block-start: 0.6em;
+      }
+
+      ul>li {
+        list-style: disc;
+      }
+
+      ul.to-do-list {
+        text-indent: -1.7em;
+      }
+
+      ul.to-do-list>li {
+        list-style: none;
+      }
+
+      .to-do-children-checked {
+        text-decoration: line-through;
+        opacity: 0.375;
+      }
+
+      ul.toggle>li {
+        list-style: none;
+      }
+
+      ul {
+        padding-inline-start: 1.7em;
+	text-align: left;
+      }
+
+      ul>li {
+        padding-left: 0.1em;
+      }
+
+      ol {
+        padding-inline-start: 1.6em;
+      }
+
+      ol>li {
+        padding-left: 0.2em;
+      }
+
+      .mono ol {
+        padding-inline-start: 2em;
+      }
+
+      .mono ol>li {
+        text-indent: -0.4em;
+      }
+
+      .toggle {
+        padding-inline-start: 0em;
+        list-style-type: none;
+      }
+
+      /* Indent toggle children */
+      .toggle>li>details {
+        padding-left: 1.7em;
+      }
+
+      .toggle>li>details>summary {
+        margin-left: -1.1em;
+      }
+
+      .selected-value {
+        display: inline-block;
+        padding: 0 0.5em;
+        background: rgba(206, 205, 202, 0.5);
+        border-radius: 3px;
+        margin-right: 0.5em;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+        white-space: nowrap;
+      }
+
+      .collection-title {
+        display: inline-block;
+        margin-right: 1em;
+      }
+
+      .simple-table {
+        margin-top: 1em;
+        font-size: 0.875rem;
+        empty-cells: show;
+      }
+
+      .simple-table td {
+        height: 29px;
+        min-width: 120px;
+      }
+
+      .simple-table th {
+        height: 29px;
+        min-width: 120px;
+      }
+
+      .simple-table-header-color {
+        background: rgb(247, 246, 243);
+        color: black;
+      }
+
+      .simple-table-header {
+        font-weight: 500;
+      }
+
+      time {
+        opacity: 0.5;
+      }
+
+      .icon {
+        display: inline-block;
+        max-width: 1.2em;
+        max-height: 1.2em;
+        text-decoration: none;
+        vertical-align: text-bottom;
+        margin-right: 0.5em;
+      }
+
+      img.icon {
+        border-radius: 3px;
+      }
+
+      .user-icon {
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 100%;
+        margin-right: 0.5rem;
+      }
+
+      .user-icon-inner {
+        font-size: 0.8em;
+      }
+
+      .text-icon {
+        border: 1px solid #000;
+        text-align: center;
+      }
+
+      .page-cover-image {
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        /*max-height: 88vh;*/
+      }
+
+      .page-header-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .page-header-icon-with-cover {
+        margin-top: -0.72em;
+        margin-left: 0.07em;
+      }
+
+      .page-header-icon img {
+        border-radius: 3px;
+      }
+
+      .link-to-page {
+        margin: 1em 0;
+        padding: 0;
+        border: none;
+        font-weight: 500;
+      }
+
+      p>.user {
+        opacity: 0.5;
+      }
+
+      td>.user,
+      td>time {
+        white-space: nowrap;
+      }
+
+      input[type="checkbox"] {
+        transform: scale(1.5);
+        margin-right: 0.6em;
+        vertical-align: middle;
+      }
+
+      p {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        text-align: justify;
+        /* 05-sep */
+        font-size: 20px !important;
+        /* 05-sep */
+        transition-duration: 1s;
+      }
+
+      .image {
+        border: none;
+        margin: 1.5em 0;
+        padding: 0;
+        border-radius: 0;
+        text-align: center;
+      }
+
+      .code,
+      code {
+        background: rgba(135, 131, 120, 0.15);
+        border-radius: 3px;
+        padding: 0.2em 0.4em;
+        border-radius: 3px;
+        font-size: 85%;
+        tab-size: 2;
+      }
+
+      code {
+        color: #eb5757;
+      }
+
+      .code {
+        padding: 1.5em 1em;
+      }
+
+      .code-wrap {
+        white-space: pre-wrap;
+        word-break: break-all;
+      }
+
+      .code>code {
+        background: none;
+        padding: 0;
+        font-size: 100%;
+        color: inherit;
+      }
+
+      blockquote {
+        font-size: 1.25em;
+        margin: 1em 0;
+        padding-left: 1em;
+        border-left: 3px solid rgb(55, 53, 47);
+      }
+
+      .
+      
+      mark {
+        text-decoration: none;
+        max-height: 8em;
+        padding: 0;
+        display: flex;
+        width: 100%;
+        align-items: stretch;
+      }
+
+      .bookmark-title {
+        font-size: 0.85em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 1.75em;
+        white-space: nowrap;
+      }
+
+      .bookmark-text {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .bookmark-info {
+        flex: 4 1 180px;
+        padding: 12px 14px 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .bookmark-image {
+        width: 33%;
+        flex: 1 1 180px;
+        display: block;
+        position: relative;
+        object-fit: cover;
+        border-radius: 1px;
+      }
+
+      .bookmark-description {
+        color: rgba(55, 53, 47, 0.6);
+        font-size: 0.75em;
+        overflow: hidden;
+        max-height: 4.5em;
+        word-break: break-word;
+      }
+
+      .bookmark-href {
+        font-size: 0.75em;
+        margin-top: 0.25em;
+      }
+
+      .sans {
+        font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+      }
+
+      .code {
+        font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace;
+      }
+
+      .serif {
+        font-family: Lyon-Text, Georgia, ui-serif, serif;
+      }
+
+      .mono {
+        font-family: iawriter-mono, Nitti, Menlo, Courier, monospace;
+      }
+
+      .pdf .sans {
+        font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP';
+      }
+
+      .pdf:lang(zh-CN) .sans {
+        font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC';
+      }
+
+      .pdf:lang(zh-TW) .sans {
+        font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC';
+      }
+
+      .pdf:lang(ko-KR) .sans {
+        font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR';
+      }
+
+      .pdf .code {
+        font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+      }
+
+      .pdf:lang(zh-CN) .code {
+        font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+      }
+
+      .pdf:lang(zh-TW) .code {
+        font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+      }
+
+      .pdf:lang(ko-KR) .code {
+        font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+      }
+
+      .pdf .serif {
+        font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP';
+      }
+
+      .pdf:lang(zh-CN) .serif {
+        font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC';
+      }
+
+      .pdf:lang(zh-TW) .serif {
+        font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC';
+      }
+
+      .pdf:lang(ko-KR) .serif {
+        font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR';
+      }
+
+      .pdf .mono {
+        font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP';
+      }
+
+      .pdf:lang(zh-CN) .mono {
+        font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC';
+      }
+
+      .pdf:lang(zh-TW) .mono {
+        font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC';
+      }
+
+      .pdf:lang(ko-KR) .mono {
+        font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR';
+      }
+
+      .highlight-default {
+        color: rgba(55, 53, 47, 1);
+      }
+
+      .highlight-gray {
+        color: rgba(120, 119, 116, 1);
+        fill: rgba(120, 119, 116, 1);
+      }
+
+      .highlight-brown {
+        color: rgba(159, 107, 83, 1);
+        fill: rgba(159, 107, 83, 1);
+      }
+
+      .highlight-orange {
+        color: rgba(217, 115, 13, 1);
+        fill: rgba(217, 115, 13, 1);
+      }
+
+      .highlight-yellow {
+        color: rgba(203, 145, 47, 1);
+        fill: rgba(203, 145, 47, 1);
+      }
+
+      .highlight-teal {
+        color: rgba(68, 131, 97, 1);
+        fill: rgba(68, 131, 97, 1);
+      }
+
+      .highlight-blue {
+        color: rgba(51, 126, 169, 1);
+        fill: rgba(51, 126, 169, 1);
+      }
+
+      .highlight-purple {
+        color: rgba(144, 101, 176, 1);
+        fill: rgba(144, 101, 176, 1);
+      }
+
+      .highlight-pink {
+        color: rgba(193, 76, 138, 1);
+        fill: rgba(193, 76, 138, 1);
+      }
+
+      .highlight-red {
+        color: rgba(212, 76, 71, 1);
+        fill: rgba(212, 76, 71, 1);
+      }
+
+      .highlight-gray_background {
+        background: rgba(241, 241, 239, 1);
+      }
+
+      .highlight-brown_background {
+        background: rgba(244, 238, 238, 1);
+      }
+
+      .highlight-orange_background {
+        background: rgba(251, 236, 221, 1);
+      }
+
+      .highlight-yellow_background {
+        background: rgba(251, 243, 219, 1);
+      }
+
+      .highlight-teal_background {
+        background: rgba(237, 243, 236, 1);
+      }
+
+      .highlight-blue_background {
+        background: rgba(231, 243, 248, 1);
+      }
+
+      .highlight-purple_background {
+        background: rgba(244, 240, 247, 0.8);
+      }
+
+      .highlight-pink_background {
+        background: rgba(249, 238, 243, 0.8);
+      }
+
+      .highlight-red_background {
+        background: rgba(253, 235, 236, 1);
+      }
+
+      .block-color-default {
+        color: inherit;
+        fill: inherit;
+      }
+
+      .block-color-gray {
+        color: rgba(120, 119, 116, 1);
+        fill: rgba(120, 119, 116, 1);
+      }
+
+      .block-color-brown {
+        color: rgba(159, 107, 83, 1);
+        fill: rgba(159, 107, 83, 1);
+      }
+
+      .block-color-orange {
+        color: rgba(217, 115, 13, 1);
+        fill: rgba(217, 115, 13, 1);
+      }
+
+      .block-color-yellow {
+        color: rgba(203, 145, 47, 1);
+        fill: rgba(203, 145, 47, 1);
+      }
+
+      .block-color-teal {
+        color: rgba(68, 131, 97, 1);
+        fill: rgba(68, 131, 97, 1);
+      }
+
+      .block-color-blue {
+        color: rgba(51, 126, 169, 1);
+        fill: rgba(51, 126, 169, 1);
+      }
+
+      .block-color-purple {
+        color: rgba(144, 101, 176, 1);
+        fill: rgba(144, 101, 176, 1);
+      }
+
+      .block-color-pink {
+        color: rgba(193, 76, 138, 1);
+        fill: rgba(193, 76, 138, 1);
+      }
+
+      .block-color-red {
+        color: rgba(212, 76, 71, 1);
+        fill: rgba(212, 76, 71, 1);
+      }
+
+      .block-color-gray_background {
+        background: rgba(241, 241, 239, 1);
+      }
+
+      .block-color-brown_background {
+        background: rgba(244, 238, 238, 1);
+      }
+
+      .block-color-orange_background {
+        background: rgba(251, 236, 221, 1);
+      }
+
+      .block-color-yellow_background {
+        background: rgba(251, 243, 219, 1);
+      }
+
+      .block-color-teal_background {
+        background: rgba(237, 243, 236, 1);
+      }
+
+      .block-color-blue_background {
+        background: rgba(231, 243, 248, 1);
+      }
+
+      .block-color-purple_background {
+        background: rgba(244, 240, 247, 0.8);
+      }
+
+      .block-color-pink_background {
+        background: rgba(249, 238, 243, 0.8);
+      }
+
+      .block-color-red_background {
+        background: rgba(253, 235, 236, 1);
+      }
+
+      .select-value-color-pink {
+        background-color: rgba(245, 224, 233, 1);
+      }
+
+      .select-value-color-purple {
+        background-color: rgba(232, 222, 238, 1);
+      }
+
+      .select-value-color-green {
+        background-color: rgba(219, 237, 219, 1);
+      }
+
+      .select-value-color-gray {
+        background-color: rgba(227, 226, 224, 1);
+      }
+
+      .select-value-color-opaquegray {
+        background-color: rgba(255, 255, 255, 0.0375);
+      }
+
+      .select-value-color-orange {
+        background-color: rgba(250, 222, 201, 1);
+      }
+
+      .select-value-color-brown {
+        background-color: rgba(238, 224, 218, 1);
+      }
+
+      .select-value-color-red {
+        background-color: rgba(255, 226, 221, 1);
+      }
+
+      .select-value-color-yellow {
+        background-color: rgba(253, 236, 200, 1);
+      }
+
+      .select-value-color-blue {
+        background-color: rgba(211, 229, 239, 1);
+      }
+
+      .checkbox {
+        display: inline-flex;
+        vertical-align: text-bottom;
+        width: 16;
+        height: 16;
+        background-size: 16px;
+        margin-left: 2px;
+        margin-right: 5px;
+      }
+
+      .checkbox-on {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+      }
+
+      .checkbox-off {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+      }
 }
-table {
-    border-left: none;
-    border-right: none;
-}
-th, td {
-    font-weight: normal;
-    padding: 0.25em 0.5em;
-    line-height: 1.5;
-    min-height: 1.5em;
-    text-align: left;
-}
-th {
-    color: rgba(55, 53, 47, 0.6);
-}
-.simple-table {
-    margin-top: 1em;
-    font-size: 0.875rem;
-}
-.simple-table td, .simple-table th {
-    height: 29px;
-    min-width: 120px;
-}
+    </style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
 </script>
   </head>
-<body>
+  <body>
     <article id="a9aa92c5-c6ea-415b-80ef-dc97aba1adc1" class="page serif">
-        <!--<h1 class="page-title" style="width: 100%; text-align: center;">Claire Larkins</h1>-->
-        <a href="#dcd074fe-29a2-4cba-bcfb-2dfd4780ba21"></a>
-        <header>
-            <div class="page-body">
-                <div id="dcd074fe-29a2-4cba-bcfb-2dfd4780ba21" class="column-list">
-                    <div id="c9b5df50-6c6d-4d01-9ac1-9063fbaa56ac" style="width: 30%;" class="column">
-                        <figure id="87e835ac-22c5-45e2-9a81-ed10e87eaebc" class="image">
-                            <a href="https://raw.githubusercontent.com/larkinc1/clairelarkins.com/main/Headshot%202.png">
-                                <img src="https://raw.githubusercontent.com/larkinc1/clairelarkins.com/main/Headshot%202.png" alt="Claire Larkins Headshot" />
-                            </a>
-                        </figure>
-                    </div>
-                    <div id="4d3d344a-631f-4e80-8e20-98650bead9bb" style="width: 70%;" class="column">
-                        <h3 id="1c83f7fc-35ba-4596-9edb-99e8a92b34f3">Nutritional Sciences and Dietetics</h3>
-                        <p id="9fcda5bc-4d40-4d1b-b4c6-622d4749abed">Hi! I’m Claire, a graduate student at UC Berkeley. My research interests include designing dietary interventions, exploring the gut-brain axis, and expanding global nutrition. I aim to use my creativity to develop innovative solutions that enhance nutritional care.</p>
-                        <p id="e6287bc4-c049-42cb-ad5d-a3ce30d00ede">
-                            <a href="mailto:clairehlarkins@gmail.com">Email</a> / <a href="https://www.linkedin.com/in/claire-larkins/">LinkedIn</a>
-                        </p>
-                    </div>
-                </div>
-                <figure id="d2437e58-4202-4517-9624-ecf883fd55bc" class="image">
-                    <a href="https://raw.githubusercontent.com/larkinc1/clairelarkins.com/main/assets/Pretty-Fruit.jpg">
-                        <img src="https://raw.githubusercontent.com/larkinc1/clairelarkins.com/main/assets/Pretty-Fruit.jpg" alt="Pretty Fruit" />
-                    </a>
-                </figure>
-                <h2 id="8eafce25-bfc3-418c-a80b-39a714466d26">Background</h2>
-                <div class="abc">
-                    <p id="3ce595ba-c5c2-46ab-b920-8e40d2ca458b">Growing up on a farm in rural Oregon has shaped my perspective on the importance of accessibility for individuals and communities to achieve longevity. Since then, I have learned principles of urban agriculture and continue to practice food cultivation in a community setting. I also believe culinary education can enhance self-efficacy in disease management and promote nutrition education, which can help in the prevention and early detection of diet-related chronic diseases. I volunteer and advocate for organizations that help more people access food and nutrition.</p>
-                </div>
-                <hr id="448c456f-3392-45a7-90d4-87cc22aa9471" />
-                <figure id="9bb1d822-c5b7-4aee-9bd9-10d242b12400" class="image">
-                    <a href="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/IMG_5116-2.jpg">
-                        <img src="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/IMG_5116-2.jpg" alt="Gardening with Farms to Grow in Oakland, CA" />
-                    </a>
-                    <figcaption>Gardening with Farms to Grow in Oakland, CA</figcaption>
-                </figure>
-                <h2 id="536fc468-c382-448f-95a9-851aa410026f">Graduate Research and Projects</h2>
-                <div class="abc">
-                    <p id="93786c4f-9d5f-4655-80d6-1fc20bb108c8">
-                        <strong>Human Nutrition Trial</strong>
-                        <div class="indented">
-                            <p id="1dab3e17-2849-4a48-8e87-788a3fde70f1">A dietary intervention designed and implemented to evaluate the impact of a high-protein ovo-lacto vegetarian diet on nitrogen balance.</p>
-                        </div>
-                    </p>
-                    <p id="055a0b0f-d0bf-46a4-8f50-a00252aa4c8d">
-                        <strong>Molecular Nutrition Manuscript</strong>
-                        <div class="indented">
-                            <p id="1eae18e6-cd89-4d3a-acd9-8aacc4bcdadb">An experiment that investigated changes in liver metabolism in both fed and fasted states when the PPAR-α gene was impaired.</p>
-                        </div>
-                    </p>
-                    <p id="d920f482-bd46-401b-a5a1-6e2331093927">
-                        <strong>"Neurometabolism: Gamma-aminobutyric Acid"</strong>
-                        <div class="indented">
-                            <p id="c74a5c91-ecc4-4714-bce6-5da32540aae6">A paper exploring the metabolic regulation of the nonprotein amino acid and neurotransmitter GABA and its potential use in future targeted therapies for metabolic disorders.</p>
-                        </div>
-                    </p>
-                    <p id="d920f482-bd46-401b-a5a1-6e2331093927">
-                        <strong>Dietetic Internship @ UCSF</strong>
-                        <div class="indented">
-                            <p id="c74a5c91-ecc4-4714-bce6-5da32540aae6">Clinically focused dietetic training at UCSF Health, emphasizing acute care, management, and specialty inpatient care.</p>
-                        </div>
-                    </p>
-                    <p id="d920f482-bd46-401b-a5a1-6e2331093927">
-                        <strong>Nutrition Research Capstone Project @ Stanford University</strong>
-                    </p>
-                </div>                <hr id="e03de424-bf22-4bfb-8d16-26c8136a057f" />
+      <!--<h1 class="page-title" style="width: 100%;text-align: center;">Claire Larkins</h1>-->
+		<a href="#dcd074fe-29a2-4cba-bcfb-2dfd4780ba21">
+
+		</a>
+
+	  <header>
+        <div class="page-body">
+          <div id="dcd074fe-29a2-4cba-bcfb-2dfd4780ba21" class="column-list">
+            <div id="c9b5df50-6c6d-4d01-9ac1-9063fbaa56ac" style="width:30%" class="column">
+		                  <figure id="87e835ac-22c5-45e2-9a81-ed10e87eaebc" class="image">
+               <a href="https://raw.githubusercontent.com/larkinc1/clairelarkins.com/main/Headshot%202.png">
+                  <img style="width:1166px" src="https://raw.githubusercontent.com/larkinc1/clairelarkins.com/main/Headshot%202.png" />
+                </a>
+              </figure>
+		    
+              </p>
+            </div>
+            <div id="4d3d344a-631f-4e80-8e20-98650bead9bb" style="width:70%" class="column">
+              <h3 id="1c83f7fc-35ba-4596-9edb-99e8a92b34f3" style="background:#F1F1EF;padding: 15px;border-radius: 10%;">Nutritional Sciences and Dietetics</h3>
+              <p id="9fcda5bc-4d40-4d1b-b4c6-622d4749abed" style="font-size: 20px;">Hi! I’m Claire, a graduate student at UC Berkeley. My research interests include designing dietary interventions, exploring the gut-brain axis, and expanding global nutrition. I aim to use my creativity to develop innovative solutions that enhance nutritional care.</p>
+              <p id="e6287bc4-c049-42cb-ad5d-a3ce30d00ede" class="">
+                <a href="mailto:clairehlarkins@gmail.com">Email</a>  /  <a href="https://www.linkedin.com/in/claire-larkins/">LinkedIn</a>
+              </p>
+            </div>
+          </div>
+          <figure id="d2437e58-4202-4517-9624-ecf883fd55bc" class="image" style="margin: 0 !important;">
+            <a href="https://raw.githubusercontent.com/larkinc1/clairelarkins.com/main/assets/Pretty-Fruit.jpg">
+              <img style="width:100%" src="https://raw.githubusercontent.com/larkinc1/clairelarkins.com/main/assets/Pretty-Fruit.jpg" />
+            </a>
+        
+          </figure>
+          <h2 id="8eafce25-bfc3-418c-a80b-39a714466d26" style="background:#F1F1EF;padding: 15px;border-radius: 10%;">Background</h2>
+          <div class="abc">
+            <p id="3ce595ba-c5c2-46ab-b920-8e40d2ca458b" class="">Growing up on a farm in rural Oregon has shaped my perspective on the importance of accessibility for individuals and communities to achieve longevity. Since then, I have learned principles of urban agriculture and continue to practice food cultivation in a community setting. I also believe culinary education can enhance self-efficacy in disease management and promote nutrition education, which can help in the prevention and early detection of diet-related chronic diseases. I volunteer and advocate for organizations that help more people access food and nutrition.  </p>
+            <p id="a653d15e-ac5c-47a3-9fc4-2aafa043f550" class=""> </p>
+          </div>
+          <hr id="448c456f-3392-45a7-90d4-87cc22aa9471" />
+          <figure id="9bb1d822-c5b7-4aee-9bd9-10d242b12400" class="image">
+            <a href="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/IMG_5116-2.jpg">
+              <img style="width:1967px" src="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/IMG_5116-2.jpg" />
+            </a>
+          </figure>	
+		     <figcaption>Gardening with Farms to Grow in Oakland, CA</figcaption>
+		  
+          <h2 id="536fc468-c382-448f-95a9-851aa410026f" style="background:#F1F1EF;padding: 15px;border-radius: 10%;">Graduate Research and Projects</h2>
+          <div class="abc">
+            <p id="93786c4f-9d5f-4655-80d6-1fc20bb108c8" class="">
+              <strong>Human Nutrition Trial </strong>
+            <div class="indented">
+              <p id="1dab3e17-2849-4a48-8e87-788a3fde70f1" class="">A dietary intervention designed and implemented to evaluate the impact of a high-protein ovo-lacto vegetarian diet on nitrogen balance.</p>
+            </div>
+            </p>
+            <p id="055a0b0f-d0bf-46a4-8f50-a00252aa4c8d" class="">
+              <strong>Molecular Nutrition Manuscript </strong>
+            <div class="indented">
+              <p id="1eae18e6-cd89-4d3a-acd9-8aacc4bcdadb" class="">An experiment that investigated changes in liver metabolism in both fed and fasted states when the PPAR-α gene was impaired.</p>
+            </div>
+            </p>
+            <p id="d920f482-bd46-401b-a5a1-6e2331093927" class="">
+              <strong>"Neurometabolism: Gamma-aminobutyric Acid" </strong> 
+            <div class="indented">
+              <p id="c74a5c91-ecc4-4714-bce6-5da32540aae6" class=""> A paper exploring the metabolic regulation of the nonprotein amino acid and neurotransmitter GABA and its potential use in future targeted therapies for metabolic disorders.</p>
+            </div>
+            </p>
+            <p id="d920f482-bd46-401b-a5a1-6e2331093927" class="">
+              <strong>Dietetic Internship @ UCSF </strong>
+            <div class="indented">
+              <p id="c74a5c91-ecc4-4714-bce6-5da32540aae6" class=""> Clinically focused dietetic training at UCSF Health, emphasizing acute care, management, and specialty inpatient care.</p>
+            </div>
+            </p>
+	  <p id="d920f482-bd46-401b-a5a1-6e2331093927" class="">     
+		  <strong>Nutrition Research Capstone Project @ Stanford University </strong>
+            </div>
+            </p>
+
+
+        
+            </div>
+            </p>		          
+            <div class="indented">
+              <p id="c74a5c91-ecc4-4714-bce6-5da32540aae6" class=""> </p>
+            </div>
+            </p>
+            <p id="4ea519a0-d515-4ae7-87e3-29a80c382b5b" class="">
+        
+            </p>
+          
+          </div>
+          <hr id="e03de424-bf22-4bfb-8d16-26c8136a057f" />
+        </div>
+        </p>
+        <div id="659e6fa7-ec45-47ba-a15f-533a11639c98" class="column-list">
+          <div id="573f943e-ee6a-47a6-833f-7a0b0d69fda4" style="width:50%" class="column">
+            <h2 id="05370752-e9fe-4d25-9371-823248a18f87" style="background:#F1F1EF;padding: 15px;border-radius: 10%;">Workshops</h2>
+            <ul id="1f002f4b-0825-4ca0-aa52-71c781018f24" class="bulleted-list">
+              <li style="list-style-type:disc">Portuguese Cooking, <em>Lisbon, Portugal</em>
+              </li>
+            </ul>
+            <ul id="5ae1594b-0a71-475e-acbb-7b83cb5694a9" class="bulleted-list">
+              <li style="list-style-type:disc">Tortellini + Tiramisu, <em>Venice, Italy</em>
+              </li>
+            </ul>
+            <ul id="3c725106-e62d-4578-b67b-42ae9a1fdf1f" class="bulleted-list">
+              <li style="list-style-type:disc">Mediterranean Cooking, <em>Athens, Greece</em>
+              </li>
+            </ul>
+            <ul id="3caa783c-9739-427d-8501-3bcf4ec21108" class="bulleted-list">
+              <li style="list-style-type:disc">Olive Oil Workshop, <em>Naxos, Greece</em>
+              </li>
+            </ul>
+            <ul id="d4d301c3-afe0-44dc-bd53-b518018c1cf3" class="bulleted-list">
+              <li style="list-style-type:disc">Cheese + Chocolate, <em>Zurich, Switzerland</em>
+              </li>
+            </ul>
+            <ul id="ec036fe4-ac2d-4278-9a59-529da9b903a1" class="bulleted-list">
+              <li style="list-style-type:disc">Edible Herbs, <em> Zurich, Switzerland</em>
+              </li>
+            </ul>
+        
+            <ul id="94e8edfe-859f-42e4-9a03-a809241075aa" class="bulleted-list">
+              <li style="list-style-type:disc">Beekeeping, <em>Gozo, Malta</em>
+              </li>
+            </ul>
+            <ul id="2b2853e1-614a-4b9b-b9e2-a3fa622b2350" class="bulleted-list">
+              <li style="list-style-type:disc">Wine Tasting + Production, <em> Gozo, Malta</em>
+              </li>
+            </ul>
+            <ul id="933719af-f2a7-49aa-b0e6-4a9bd3c99b6e" class="bulleted-list">
+              <li style="list-style-type:disc">Medicinal Herbs, <em>Vancouver, WA</em>
+              </li>
+            </ul>
+            <ul id="d4345a2a-1db4-4228-8b49-96368ae4108b" class="bulleted-list">
+              <li style="list-style-type:disc">Seasonal Jamming, <em>Portland, OR</em>
+              </li>
+            </ul>
+            <ul id="066ee1b8-134f-4d59-9852-1907c141f91f" class="bulleted-list">
+              <li style="list-style-type:disc">Terrarium Building, <em>Portland, OR</em>
+              </li>
+            </ul>
+	 <ul id="feb27dbf-390b-47af-a180-f1a8ce12590c" class="bulleted-list">
+              <li style="list-style-type:disc">Cacao Fermentation, <em>San Francisco, CA</em>
+              </li>
+            </ul>
+            <ul id="feb27dbf-390b-47af-a180-f1a8ce12590c" class="bulleted-list">
+              <li style="list-style-type:disc">Sake Brewing, <em>Berkeley, CA</em>
+              </li>
+            </ul>
+
+          </div>
+          <div id="7ab1a10f-0896-4aee-848d-75b462892c8e" style="width:50%" class="column">
+            <p id="d1ff51ea-fcad-4872-918b-fa89e4ef7f89" class=""></p>
+            <figure id="76c46e13-8795-4f67-a0de-0046b88d6088" class="image">
+              <a href="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/IMG_3259.jpg">
+                <img style="height:470px" src="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/IMG_3259.jpg" />
+              </a>
+            </figure>
+          </div>
+        </div>
+        <div id="40332832-811d-4268-8b60-39d41e25e702" class="column-list">
+          <div id="58d094b3-2e40-4b9d-b331-8e070ee99338" style="width:50%" class="column">
+            <figure id="ba14ff22-65a2-43ef-96c6-903c57e908cb" style="text-align:left !important;" class="image">
+              <a href="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/7D85914C-B43B-4021-973E-3203CC0EB428.jpeg">
+                <img style="width:350px" src="Claire%20Larkins%2087e835ac22c545e29a81ed10e87eaebc/7D85914C-B43B-4021-973E-3203CC0EB428.jpeg" />
+              </a>
+            </figure>
+     <figure id="20b9f16f-7e2b-400a-8716-4f9c570c6e98" style="text-align:left !important;" class="image">
+              <a href="https://raw.githubusercontent.com/larkinc1/clairelarkins.com/main/assets/Pome.png">
+                <img style="width:350px;" src="https://raw.githubusercontent.com/larkinc1/clairelarkins.com/main/assets/Pome.png" />
+              </a>
+            </figure>
+          </div>
+          <div id="09207350-2fd0-4020-a8ab-d9f3f8235388" style="width:50%" class="column">
+            <h2 id="1d0ef024-0561-4304-b54c-bcf9b997d1ce" style="background:#F1F1EF;padding: 15px;border-radius: 10%;">Books</h2>
+            <p id="4413d096-3f8f-4de9-b40b-e210420b4392" class="">
+                </div>           
+                <hr id="e03de424-bf22-4bfb-8d16-26c8136a057f" />
                 <div id="659e6fa7-ec45-47ba-a15f-533a11639c98" class="column-list">
                     <div id="573f943e-ee6a-47a6-833f-7a0b0d69fda4" style="width: 50%;" class="column">
                         <h2 id="05370752-e9fe-4d25-9371-823248a18f87">Books</h2>
@@ -364,15 +1237,9 @@ th {
                         </ul>
                     </div>
                       <hr id="017ad081-691e-4014-9c1d-e7118b44d8e7" />
-                <h2>Community Engagement</h2>
-                <ul class="bulleted-list">
-                    <li>Nutrition-focused initiatives to improve diet access in the Bay Area</li>
-                    <li>Volunteer work with local community kitchens and nutrition education programs</li>
-                    <li>Advocacy for urban agriculture and sustainability practices</li>
-                </ul>
-                <hr id="d1ab9b0e-3e59-4b2f-9f80-b785d1550fb7" />
-                <h2 style="background:#F1F1EF;padding: 15px;border-radius: 10%;">Attended Events</h2>
-                <div class="abc">
+</div>
+        <h2 id="eb0a73ae-827b-4155-b270-4b4951e62932" style="background:#F1F1EF;padding: 15px;border-radius: 10%;">Attended Events</h2>
+        <div class="abc">
                     <p id="event-1">07.2024: MNSD Capstone Research Symposium - UCB</p>
                     <p id="event-2">04.2024: CANDAC's 100th Annual Dietetics Conference - SF</p>
                     <p id="event-3">03.2024: California Academy Advocacy Summit - Sacramento</p>
@@ -390,9 +1257,10 @@ th {
                     <p id="event-15">07.2022: Slow Food Movement - Alice Waters</p>
                     <p id="event-16">03.2022: Sprouts’ Benefit Gala - SF</p>
                     <p id="event-17">08.2021: Culinary Medicine - Health meets Food Conference</p>
-                </div>
-            </div>
-        </header>
+        </div>
+        </div>
+        <hr id="d1ab9b0e-3e59-4b2f-9f80-b785d1550fb7" />
+        </div>
     </article>
-</body>
+  </body>
 </html>
